@@ -1,0 +1,7 @@
+{
+  "name": "hypertrons-ci-manager",
+  "description": "CI plugin for hypertrons",
+  "eggPlugin": {
+    "name": "ciManager"
+  }
+}

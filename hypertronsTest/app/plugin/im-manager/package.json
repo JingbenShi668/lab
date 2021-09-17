@@ -1,0 +1,7 @@
+{
+  "name": "hypertrons-im-manager",
+  "description": "IM plugin for hypertrons",
+  "eggPlugin": {
+    "name": "imManager"
+  }
+}

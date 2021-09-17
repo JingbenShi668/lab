@@ -1,0 +1,7 @@
+{
+  "name": "hypertrons-github-manager",
+  "description": "GitHub manager for hypertrons",
+  "eggPlugin": {
+    "name": "github"
+  }
+}

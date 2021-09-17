@@ -1,0 +1,7 @@
+{
+  "name": "hypertrons-installation",
+  "description": "Installation manager for hypertrons",
+  "eggPlugin": {
+    "name": "installation"
+  }
+}
