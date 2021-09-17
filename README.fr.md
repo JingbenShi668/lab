@@ -2,7 +2,7 @@
 
 Certains travaux basés sur le laboratoire.
 
-Many interesting things happen here～🎉🎉🎉
+Beaucoup de choses intéressantes se passent ici～🎉🎉🎉
 
 Testez les étiquettes Hypertrons.
 
