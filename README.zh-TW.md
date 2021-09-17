@@ -1,9 +1,9 @@
-# 實驗室
+# lab
 
-一些基於實驗室的工作。
+Some work based on laboratory.
 
-這裡發生了很多有趣的事情～🎉🎉🎉
+Many interesting things happen here～🎉🎉🎉
 
-測試 Hypertrons 標籤。
+Test Hypertrons labels.
 
-再次測試 Hypertrons 標籤。
+Test Hypertrons labels again.
