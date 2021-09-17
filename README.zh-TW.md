@@ -6,4 +6,4 @@
 
 測試 Hypertrons 標籤。
 
-Test Hypertrons labels again.
+再次測試 Hypertrons 標籤。
