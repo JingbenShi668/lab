@@ -1,0 +1,7 @@
+{
+  "name": "hypertrons-translate-plugin",
+  "description": "translate plugin for hypertrons",
+  "eggPlugin": {
+    "name": "translate"
+  }
+}
