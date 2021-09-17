@@ -12,7 +12,6 @@ jobs:
         id: translation
         with:
           provider: yandex
-          api_additional_parameter: canadacentral
           api_key: 'trnsl.1.1.20161125T152027Z.65e73e18a60f3051.7764a7a11754995544ad557501df9e14abbfb6e0'
           lang: 'en-ru'
           source: 'This is awesome project! Thank you.'
