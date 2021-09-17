@@ -6,4 +6,4 @@
 
 اختبار تسميات Hypertrons.
 
-اختبار تسميات Hypertrons مرة أخرى.
+Test Hypertrons labels again.
