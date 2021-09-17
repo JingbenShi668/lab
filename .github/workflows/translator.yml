@@ -1,0 +1,18 @@
+name: Translation
+
+on: push
+
+jobs:
+  translation:
+    name: Run translation
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v1
+      - uses: fabasoad/translation-action@v1.0.0
+        id: translation
+        with:
+          provider: Linguatools
+          lang: 'en-ru'
+          source: 'This is awesome project! Thank you.'
+      - name: Print translation result
+        run: echo "${{ steps.translation.outputs.text }}"
