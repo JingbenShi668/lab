@@ -1,9 +1,9 @@
 # مختبر
 
-بعض الأعمال تعتمد على المختبر.
+Some work based on laboratory.
 
 تحدث أشياء كثيرة مثيرة هنا ～ 🎉🎉🎉
 
-Test Hypertrons labels.
+اختبار تسميات Hypertrons.
 
-اختبار تسميات Hypertrons مرة أخرى.
+Test Hypertrons labels again.
