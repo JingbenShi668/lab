@@ -2,8 +2,8 @@
 
 一些基於實驗室的工作。
 
-這裡發生了很多有趣的事情～🎉🎉🎉
+Many interesting things happen here～🎉🎉🎉
 
-Test Hypertrons labels.
+測試 Hypertrons 標籤。
 
-再次測試 Hypertrons 標籤。
+Test Hypertrons labels again.
