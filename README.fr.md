@@ -6,4 +6,4 @@ Beaucoup de choses intéressantes se passent ici～🎉🎉🎉
 
 Testez les étiquettes Hypertrons.
 
-Test Hypertrons labels again.
+Testez à nouveau les étiquettes Hypertrons.
