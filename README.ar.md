@@ -2,8 +2,8 @@
 
 بعض الأعمال تعتمد على المختبر.
 
-Many interesting things happen here～🎉🎉🎉
+تحدث أشياء كثيرة مثيرة هنا ～ 🎉🎉🎉
 
-Test Hypertrons labels.
+اختبار تسميات Hypertrons.
 
-Test Hypertrons labels again.
+اختبار تسميات Hypertrons مرة أخرى.
