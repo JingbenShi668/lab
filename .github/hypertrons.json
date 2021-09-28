@@ -98,6 +98,9 @@
     "version": 1,
     "sched": "10 * * * * *"
   },
+  "auto_update_contribution": {
+    "version": 1
+  },
   "role": {
     "version": 1,
     "roles": [
