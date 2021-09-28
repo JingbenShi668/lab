@@ -96,7 +96,7 @@
   },
   "auto_translate_metrics": {
     "version": 1,
-    "sched": "0,5,10,15,20,25,30,35,40,45,50,55 * * * * *"
+    "sched": "10 * * * * *"
   },
   "auto_update_contribution": {
     "version": 1
