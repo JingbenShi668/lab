@@ -92,7 +92,7 @@
   },
   "issue_reminder": {
     "version": 1,
-    "sched": "0 0 9 * * *"
+    "sched": "8 8 9 * * *"
   },
   "auto_translate_metrics": {
     "version": 1,
@@ -167,9 +167,6 @@
     "version": 1
   },
   "translation": {
-    "version": 1
-  },
-  "auto_update_contribution": {
     "version": 1
   },
   "pr_uml_renderer": {
