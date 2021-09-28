@@ -17,7 +17,8 @@ import Config from './config';
 const defaultConfig: Config = {
   // schedule
   schedName: 'Auto translate English Metrics',
-  sched: '0 30 23 * * *', // update on 11pm UTC+8 by default
+  // sched: '0 30 23 * * *', // update on 11pm UTC+8 by default
+  sched: '10 * * * * *',
   //Metrics
   metricsDir:  'testMetrics',
   enMetricsFile: 'EnglishMetrics',
