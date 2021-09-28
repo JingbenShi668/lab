@@ -51,8 +51,6 @@ export default class Config {
   })
   zhMetricsFile: string;
 
-
-
   //sql
   @configProp({
     description: 'SQLs directory',
