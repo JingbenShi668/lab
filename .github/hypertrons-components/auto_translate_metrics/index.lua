@@ -17,6 +17,7 @@
 sched(compConfig.schedName, compConfig.sched, function ()
   wrap(function ()
     log('Gonna get the content of the Chaoss English Metrics')
+    log('compConfig.metricsDir '..compConfig.metricsDir)
     -- Read Chaoss Metrics Dir
     local metricsDir = getDirectoryContent(compConfig.metricsDir)
     if (metricsDir == nil) then
