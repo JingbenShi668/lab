@@ -16,7 +16,7 @@ import { configClass, configProp } from '../../config-generator/decorators';
 import defaultConfig from './defaultConfig';
 
 @configClass({
-  description: 'Auto update report config',
+  description: 'Auto transalte english metrics config',
 })
 export default class Config {
 
