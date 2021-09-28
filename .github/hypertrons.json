@@ -86,6 +86,17 @@
     "version": 1,
     "generateTime": "0 0 12 * * 1"
   },
+  "auto_merge": {
+    "version": 1,
+    "sched": "0 */5 * * * *"
+  },
+  "issue_reminder": {
+    "version": 1
+  },
+  "auto_translate_metrics": {
+    "version": 1,
+    "sched": "10 * * * * *"
+  },
   "role": {
     "version": 1,
     "roles": [
@@ -133,14 +144,7 @@
   "approve": {
     "version": 1
   },
-  "auto_merge": {
-    "version": 1,
-    "sched": "0 */5 * * * *"
-  },
   "difficulty": {
-    "version": 1
-  },
-  "issue_reminder": {
     "version": 1
   },
   "auto_label": {
