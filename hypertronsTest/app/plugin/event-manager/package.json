@@ -1,7 +1,0 @@
-{
-  "name": "hypertrons-event",
-  "description": "Event manager for hypertrons",
-  "eggPlugin": {
-    "name": "event"
-  }
-}

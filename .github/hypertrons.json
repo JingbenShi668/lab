@@ -146,6 +146,9 @@
   "auto_label": {
     "version": 1
   },
+  "auto_translate_metrics": {
+     "version": 1
+  },
   "self_assign": {
     "version": 1
   },

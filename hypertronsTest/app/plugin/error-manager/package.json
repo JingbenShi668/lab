@@ -1,7 +1,0 @@
-{
-  "name": "hypertrons-error-manager",
-  "description": "Error plugin for hypertrons",
-  "eggPlugin": {
-    "name": "errorManager"
-  }
-}

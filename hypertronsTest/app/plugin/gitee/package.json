@@ -1,7 +1,0 @@
-{
-  "name": "mentor-bot-gitee-manager",
-  "description": "Gitee manager for mentor bot",
-  "eggPlugin": {
-    "name": "gitee"
-  }
-}

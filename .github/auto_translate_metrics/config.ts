@@ -32,6 +32,28 @@ export default class Config {
   })
   sched: string;
 
+  //Metrics
+  @configProp({
+    description: 'Metrics directory',
+    defaultValue: defaultConfig.metricsDir,
+  })
+  metricsDir: string;
+
+  @configProp({
+    description: 'enMetricsFile file',
+    defaultValue: defaultConfig.enMetricsFile,
+  })
+  enMetricsFile: string;
+
+  @configProp({
+    description: 'EnglishMetrics file',
+    defaultValue: defaultConfig.zhMetricsFile,
+  })
+  zhMetricsFile: string;
+
+
+
+  //sql
   @configProp({
     description: 'SQLs directory',
     defaultValue: defaultConfig.sqlsDir,

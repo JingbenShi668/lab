@@ -16,8 +16,13 @@ import Config from './config';
 
 const defaultConfig: Config = {
   // schedule
-  schedName: 'Auto report update',
-  sched: '0 0 23 * * *', // update on 11pm UTC+8 by default
+  schedName: 'Auto translate English Metrics',
+  sched: '0 30 23 * * *', // update on 11pm UTC+8 by default
+  //Metrics
+  metricsDir:  'testMetrics',
+  enMetricsFile: 'EnglishMetrics',
+  zhMetricsFile: 'ChineseMetrics',
+
   // sqls
   sqlsDir: 'sqls',
   sqlFile: '/sql',

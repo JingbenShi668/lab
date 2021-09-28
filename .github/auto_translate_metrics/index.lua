@@ -16,7 +16,23 @@
 
 sched(compConfig.schedName, compConfig.sched, function ()
   wrap(function ()
-    log('Gonna update report')
+    log('Gonna get the content of the Chaoss English Metrics')
+    -- Read Chaoss Metrics Dir
+    local metricsDir = getDirectoryContent(compConfig.metricsDir)
+    if (metricsDir == nil) then
+      log('No metrics file found under'..compConfig.metricsDir)
+      return
+    end
+    log('Find '..#metricsDir..' Metrics Dir')
+
+    -- Read Chaoss English Metrics File
+    local enMetricsRaw = getFileContent(compConfig.enMetricsFile).content
+    if(enMetricsRaw ~= nil) then
+      log('enMetricsRaw Content-----------------------------------')
+      log('enMetricsRaw Content: '..enMetricsRaw)
+    end
+
+
     -- Read all sqls from remote repo
     local sqlDir = getDirectoryContent(compConfig.sqlsDir)
     if (sqlDir == nil) then
