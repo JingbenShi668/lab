@@ -47,7 +47,7 @@ export default class Config {
 
   @configProp({
     description: 'en2zhMetrics file',
-    defaultValue: defaultConfig.enMetricsFile,
+    defaultValue: defaultConfig.resultMetricsFile,
   })
   resultMetricsFile: string;
 
