@@ -22,32 +22,8 @@ const defaultConfig: Config = {
   //Metrics
   metricsDir:  'testMetrics',
   enMetricsFile: 'EnglishMetrics',
+  resultMetricsFile: 'hypertronsTest/en2zhMetrics',
   zhMetricsFile: 'ChineseMetrics',
-
-  // sqls
-  sqlsDir: 'sqls',
-  sqlFile: '/sql',
-  sqlManifestFile: '/manifest.json',
-  sqlPreProcessorFile: '/pre-processor.js',
-  sqlPostProcessorFile: '/post-processor.js',
-  defaultRenderParams: {
-    year: 2020,
-    table: 'github_log.year2020',
-    owner: 'X-lab2017',
-    repo: 'github-analysis-report',
-    baseUrl: 'http://gar2020.opensource-service.cn/',
-  },
-  sqlRequestUrl: 'http://localhost:7001/query',
-  // report
-  reportTemplateFile: 'REPORT_TEMPLATE.md',
-  reportFile: 'REPORT.md',
-  reportWebFile: 'docs/report.md',
-  // commit and pull
-  defaultBranch: 'master',
-  newBranchName: 'auto-update-report-{{timestamp}}',
-  commitMessage: 'docs: {{branchName}}',
-  pullTitle: '[Docs] Update report {{branchName}}',
-  pullBody: 'Update report automatically by robot from {{branchName}}',
 };
 
 export default defaultConfig;

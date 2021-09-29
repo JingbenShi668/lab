@@ -46,108 +46,15 @@ export default class Config {
   enMetricsFile: string;
 
   @configProp({
+    description: 'en2zhMetrics file',
+    defaultValue: defaultConfig.enMetricsFile,
+  })
+  resultMetricsFile: string;
+
+  @configProp({
     description: 'EnglishMetrics file',
     defaultValue: defaultConfig.zhMetricsFile,
   })
   zhMetricsFile: string;
 
-  //sql
-  @configProp({
-    description: 'SQLs directory',
-    defaultValue: defaultConfig.sqlsDir,
-  })
-  sqlsDir: string;
-
-  @configProp({
-    description: 'SQL file path',
-    defaultValue: defaultConfig.sqlFile,
-  })
-  sqlFile: string;
-
-  @configProp({
-    description: 'SQL manifest file path',
-    defaultValue: defaultConfig.sqlManifestFile,
-  })
-  sqlManifestFile: string;
-
-  @configProp({
-    description: 'SQL pre processor file path',
-    defaultValue: defaultConfig.sqlPreProcessorFile,
-  })
-  sqlPreProcessorFile: string;
-
-  @configProp({
-    description: 'SQL post processor file path',
-    defaultValue: defaultConfig.sqlPostProcessorFile,
-  })
-  sqlPostProcessorFile: string;
-
-  @configProp({
-    description: 'SQL & report render params',
-    defaultValue: defaultConfig.defaultRenderParams,
-    type: 'any',
-  })
-  defaultRenderParams: any;
-
-  @configProp({
-    description: 'Run SQL url',
-    defaultValue: defaultConfig.sqlRequestUrl,
-  })
-  sqlRequestUrl: string;
-
-  @configProp({
-    description: 'Report template file path',
-    defaultValue: defaultConfig.reportTemplateFile,
-  })
-  reportTemplateFile: string;
-
-  @configProp({
-    description: 'Report file path',
-    defaultValue: defaultConfig.reportFile,
-  })
-  reportFile: string;
-
-  @configProp({
-    description: 'Report file path',
-    defaultValue: defaultConfig.reportWebFile,
-  })
-  reportWebFile: string;
-
-  @configProp({
-    description: 'Default branch to make pull',
-    defaultValue: defaultConfig.defaultBranch,
-  })
-  defaultBranch: string;
-
-  @configProp({
-    description: 'New report commit branch name',
-    defaultValue: defaultConfig.newBranchName,
-    type: 'render_string',
-    renderParams: [ 'timestamp' ],
-  })
-  newBranchName: string;
-
-  @configProp({
-    description: 'New report commit message',
-    defaultValue: defaultConfig.commitMessage,
-    type: 'render_string',
-    renderParams: [ 'branchName' ],
-  })
-  commitMessage: string;
-
-  @configProp({
-    description: 'New report pull title',
-    defaultValue: defaultConfig.pullTitle,
-    type: 'render_string',
-    renderParams: [ 'branchName' ],
-  })
-  pullTitle: string;
-
-  @configProp({
-    description: 'New report pull body',
-    defaultValue: defaultConfig.pullBody,
-    type: 'render_string',
-    renderParams: [ 'branchName' ],
-  })
-  pullBody: string;
 }
