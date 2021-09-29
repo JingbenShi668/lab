@@ -133,6 +133,12 @@
         "description": "Anyone",
         "users": [],
         "commands": [ "/self-assign" ]
+      },
+      {
+        "name": "anyone",
+        "description": "Anyone",
+        "users": [],
+        "commands": [ "/translate" ]
       }
     ]
   },
