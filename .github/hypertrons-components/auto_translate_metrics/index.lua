@@ -14,93 +14,43 @@
 
 -- Auto update report scheduler
 
-sched(compConfig.schedName, compConfig.sched, function ()
-  wrap(function ()
-    log('Gonna get the content of the Chaoss English Metrics')
-    log('compConfig.metricsDir '..compConfig.metricsDir)
-    -- Read Chaoss Metrics Dir
-    local metricsDir = getDirectoryContent(compConfig.metricsDir)
-    if (metricsDir == nil) then
-      log('No metrics file found under'..compConfig.metricsDir)
-      return
-    end
-    log('Find '..#metricsDir..' Metrics Dir')
+--[[sched(compConfig.schedName, compConfig.sched, function ()
+  wrap(function ()]]
 
-    -- Read Chaoss English Metrics File
-    local enMetricsRaw = getFileContent(compConfig.enMetricsFile).content
-    if(enMetricsRaw ~= nil) then
-      log('enMetricsRaw Content-----------------------------------')
-      log('enMetricsRaw Content: '..enMetricsRaw)
-    end
+local issue_Body = '';
+
+on('IssueEvent', function (e)
+  if (e.action == 'opened') then
+    local commentTitle = renderString(config['issue-english-translator'].title, {title=translatedTitle});
+    issue_Body = renderString(config['issue-english-translator'].body, {body=translatedBody});
+    log('issue_Body-------------'..issue_Body);
+  end
+end)
 
 
-    -- Read all sqls from remote repo
-    local sqlDir = getDirectoryContent(compConfig.sqlsDir)
-    if (sqlDir == nil) then
-      log('No sql found under'..compConfig.sqlsDir)
-      return
-    end
-    log('Find '..#sqlDir..' SQLs dir')
+on('CommandEvent', function (e)
+  log('Enter...........................................')
+  if (e.command == compConfig.command) then
 
-    -- Read sql details and request result
-    local sqlRenderParams = {}
-    for i=1, #sqlDir do
-      local sqlMeta = sqlDir[i]
-      if (sqlMeta.type == 'dir') then
-        local sqlRaw = getFileContent(sqlMeta.path..compConfig.sqlFile).content
-        local manifest = string2table(getFileContent(sqlMeta.path..compConfig.sqlManifestFile).content)
-        local postProcessor = getFileContent(sqlMeta.path..compConfig.sqlPostProcessorFile).content
-        local preProcessorFile = getFileContent(sqlMeta.path..compConfig.sqlPreProcessorFile)
-        local preProcessorResult = {}
-        if (preProcessorFile ~= nil) then
-          preProcessorResult = runJsCode(preProcessorFile.content, manifest.config)
-        end
+    -- Save the English Metrics in related Issue to enMetrics file
+    createOrUpdateFile(compConfig.enMetricsFile,issue_Body,'add English Metrics data','auto');
 
-        -- render sql
-        local sql = rendStr(sqlRaw, manifest.config, compConfig.defaultRenderParams, preProcessorResult)
-        -- request run sql
-        local requestRes = requestUrl({
-          ['url'] = compConfig.sqlRequestUrl,
-          ['method'] = 'POST',
-          ['form'] = {
-            ['query'] = sql
-          }
-        })
-        local renderText = runJsCode(postProcessor, string2table(requestRes).data, compConfig.defaultRenderParams, manifest.config)
-        log('Sql run result for '..sqlMeta.name..' is '..requestRes)
-        sqlRenderParams[sqlMeta.name] = {
-          ['sql'] = sqlRaw,
-          ['text'] = renderText,
-          ['config'] = manifest.config
-        }
-      end
-    end
+    -- Translate English Metrics into Chinese
+    local enMetricsToChinese = translateMetrics(issue_Body,'zh')
+    --[[    if(enMetricsRaw ~= nil) then
+          log('enMetricsToChinese Content-----------------------------------')
+          log('enMetricsToChinese Content: '..enMetricsToChinese)
+        end]]
 
-    -- render report
-    local originReport = getFileContent(compConfig.reportFile)
-    local reportTemplate = getFileContent(compConfig.reportTemplateFile)
+    -- 翻译结果完成后，将文件保存在auto分支上的txt文件中, getFileContent+createOrUpdateFile命令的组合使用
+    local enMetricsRaw = getFileContent(compConfig.resultMetricsFile).content
+    log('enMetricsRaw: '..enMetricsRaw);
+    --[[    enMetricsNew = enMetricsRaw..'希望明天是个晴天～';]]
+    enMetricsNew = enMetricsRaw..enMetricsToChinese;
+    createOrUpdateFile(compConfig.resultMetricsFile,enMetricsNew,'save translation data','auto');
 
-    local newReport = rendStr(reportTemplate.content, compConfig.defaultRenderParams, {
-      ['sqls'] = sqlRenderParams
-    })
-    log('Rendered report is '..newReport)
+    --翻译结果保存到文件中后，提交PR
+    newPullRequest(compConfig.title,compConfig.body,compConfig.head,compConfig.base,compConfig.allowModify);
 
-    -- update report by pull
-    if (newReport ~= originReport.content) then
-      log('Gonna update report by pull')
-      local branchName = rendStr(compConfig.newBranchName, {
-        ['timestamp'] = getNowTime()
-      })
-      newBranch(branchName, compConfig.defaultBranch)
-      createOrUpdateFile(compConfig.reportFile, newReport, rendStr(compConfig.commitMessage, { ['branchName'] = branchName }), branchName)
-      createOrUpdateFile(compConfig.reportWebFile, newReport, rendStr(compConfig.commitMessage, { ['branchName'] = branchName }), branchName)
-      newPullRequest({
-        ['title'] = rendStr(compConfig.pullTitle, { ['branchName'] = branchName }),
-        ['body'] = rendStr(compConfig.pullBody, { ['branchName'] = branchName }),
-        ['head'] = branchName,
-        ['base'] = compConfig.defaultBranch,
-        ['allowModify'] = true,
-      })
-    end
-  end)
+  end
 end)
