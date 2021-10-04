@@ -172,6 +172,9 @@
   "pr_uml_renderer": {
     "version": 1
   },
+  "issue_english_translator": {
+    "version": 1
+  },
   "pr_file_label": {
     "version": 1,
     "rules": [
