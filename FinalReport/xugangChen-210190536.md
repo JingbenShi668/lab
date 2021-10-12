@@ -3,13 +3,16 @@
 ## Project information
 
 
-- <b>Project name</b>：Automatic Chinese translation of Chaoss metrics<br/>
+- <b>Project name</b>
+  
+  Automatic Chinese translation of Chaoss metrics<br/>
 
-- <b> Program description</b>：</br>
-Build a GitHub app based on the GitHub open source project Hypertrons, and integrate this GitHub app into the relevant warehouse corresponding to "Chaoss Metrics Translation",
-In this way, the related functions required by "Chaoss Metrics Translation" can be realized.
+- <b> Program description</b></br>
 
-- <b>Time plan</b>: </br>
+    Build a GitHub app based on the GitHub open source project Hypertrons, and integrate this GitHub app into the relevant warehouse corresponding to "Chaoss Metrics Translation",
+    In this way, the related functions required by "Chaoss Metrics Translation" can be realized.
+
+- <b>Time plan</b></br>
    - 7/1-7/31： Understanding the related design and applicable scenarios of Hypertrons.<br/>
      
    - 8/1-8/20： Understanding and learning TypeScript and Lua syntax, and preparing for writing script later.<br/>
@@ -24,7 +27,7 @@ In this way, the related functions required by "Chaoss Metrics Translation" can 
 ## Project summary
 
 
-- <b>Project output</b>：
+- <b>Project output</b>
   
     In this summer practice, the open source translation component based on the open source project [Hypertrons](https://www.hypertrons.io/#) is TransForChaossApps123.
     The GitHub access address of this translation component is [github.com/apps/transforchaossapps123](https://github.com/apps/transforchaossapps123).<br/>
@@ -48,7 +51,7 @@ In this way, the related functions required by "Chaoss Metrics Translation" can 
    By adding the Slack webhook link to the GitHub repository corresponding to Chaoss metrics translation, you can set the slack channel to accept
    GitHub warehouse related notifications. Also, notification content of the GitHub warehouse can be customized, and the GitHub warehouse can be designated to send the specified Issue and PR to slack.<br/>
 
-- <b>Plan progress</b>：
+- <b>Plan progress</b>
   
     The content in the time plan has been basically realized in accordance with the original plan, such as basic monitoring of issues, translating metrics, saving translation results. In addtion the Github APP can  submit PR from the development branch to
     the main branch and send warehouse update information to the slack channel.
@@ -56,7 +59,7 @@ In this way, the related functions required by "Chaoss Metrics Translation" can 
     It is currently in the optimization stage of the automation process. After the end of this project, there are still some parts that can be optimized. For example, automatically read the information contained in the issue, 
     and the content corresponding to the link, etc.. But it can only read the text information in the issue body at present.
 
-- <b>Problems encountered and solutions</b>：
+- <b>Problems encountered and solutions</b>
   
     During the process of implementing automated translation plugin transforchaossapps123 based on the open source project Hypertrons
 , the main problem encountered is the using of the open source project Hypertrons, which requires a deep understanding of Hypertrons’s architecture design and the encapsulation of functions and interfaces. 
@@ -67,7 +70,7 @@ And you must handle the callback functions that Promise may correspond to, other
 combination of off-the-shelf components, this can simplify the work and use the native components provided by Hypertrons to implement related functions.
 
 
-- <b>Project completion quality</b>：
+- <b>Project completion quality</b>
 
    For this "CHAOSS Metrics Automated Translation" project, the core functions have basically been realized, which can realize automatic translation, automatic submission of changes to the translation warehouse, automatic notification of slack and other functions.
    It can be said that the workload is quite full.<br/>
@@ -79,7 +82,7 @@ combination of off-the-shelf components, this can simplify the work and use the 
    In addition, the accuracy of project translation needs to be further improved. It is necessary to organize the metrics system and apply the metrics system to the translation process to achieve more accurate translation. 
    The model of "translation after word segmentation" may be used later, and this translation process needs to be practiced.<br/>
 
-- <b>Feedback  after communicating with mentors</b>：
+- <b>Feedback  after communicating with mentors</b>
 
     The metrics translation automation has been basically realized, but there are still some problems. And if possible, the student need to continue to improve. The lack of implementation of some non-core functions, if implemented, the translation plugin function will be very
     perfected, so that it can truly realize "metrics translation automation".
