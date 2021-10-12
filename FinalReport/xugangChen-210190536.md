@@ -25,6 +25,7 @@ In this way, the related functions required by "Chaoss Metrics Translation" can 
 
 
 - <b>Project output</b>：
+  
     In this summer practice, the open source translation component based on the open source project [Hypertrons](https://www.hypertrons.io/#) is TransForChaossApps123.
     The GitHub access address of this translation component is [github.com/apps/transforchaossapps123](https://github.com/apps/transforchaossapps123).<br/>
   
@@ -48,6 +49,7 @@ In this way, the related functions required by "Chaoss Metrics Translation" can 
    GitHub warehouse related notifications. Also, notification content of the GitHub warehouse can be customized, and the GitHub warehouse can be designated to send the specified Issue and PR to slack.<br/>
 
 - <b>Plan progress</b>：
+  
     The content in the time plan has been basically realized in accordance with the original plan, such as basic monitoring of issues, translating metrics, saving translation results. In addtion the Github APP can  submit PR from the development branch to
     the main branch and send warehouse update information to the slack channel.
 
